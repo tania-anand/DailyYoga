@@ -1,0 +1,67 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MenuItem" parent="TextAppearance.AppCompat.Menu">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginLeft">0dp</item>
+    </style>
+
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="AndroidImageSlider_Corner_Oval">
+
+        <item name="android:layout_width">match_parent</item>
+
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:gravity">center</item>
+
+
+        <item name="shape">rect</item>
+
+        <item name="padding_left">3dp</item>
+
+        <item name="padding_right">3dp</item>
+
+        <item name="padding_top">4dp</item>
+
+        <item name="padding_bottom">4dp</item>
+
+
+
+        <item name="selected_color">@color/ra</item>
+
+        <item name="unselected_color">@color/ta</item>
+
+        <item name="selected_width">8dp</item>
+
+        <item name="selected_height">8dp</item>
+
+        <item name="unselected_width">6dp</item>
+
+        <item name="unselected_height">6dp</item>
+
+    </style>
+
+<!--    <style name="A" -->
+
+</resources>

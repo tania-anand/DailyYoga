@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <!--<item-->
+            <!--android:id="@+id/nav_exercise"-->
+            <!--android:icon="@drawable/exercise"-->
+            <!--android:title="Exercises" />-->
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/about_us"
+            android:title="About Us" />
+
+
+    <item android:title="Communicate">
+        <menu>
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->
+            <item
+                android:id="@+id/rate_us"
+                android:icon="@drawable/rate_us"
+                android:title="Rate Us" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/feedback"
+                android:title="Feedback" />
+        </menu>
+    </item>
+
+    <item android:title="User">
+    <menu>
+        <group android:id="@+id/user">
+        <item
+            android:id="@+id/nav_user"
+            android:icon="@drawable/note"
+            android:title="Login" />
+        </group>
+
+        <group android:id="@+id/user_register">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+
+        <item
+            android:id="@+id/nav_fav"
+            android:icon="@drawable/rate_us"
+            android:title="Favourites" />
+        </group>
+
+    </menu>
+
+    </item>
+
+
+
+
+</menu>

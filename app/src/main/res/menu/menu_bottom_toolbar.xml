@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+    <item
+        android:id="@+id/benefits"
+        android:title="@string/benefits"
+        app:showAsAction="always"
+        android:icon="@drawable/hinduism"
+        android:orderInCategory="1"
+
+        />
+  <item
+      android:id="@+id/More1"
+      android:title="@string/More"
+      app:showAsAction="always"
+      android:orderInCategory="2"
+      android:icon="@drawable/more"
+
+      />
+
+    <item
+        android:id="@+id/Contra"
+        android:title="@string/Contraindications"
+        app:showAsAction="always"
+        android:icon="@drawable/caution"
+        android:orderInCategory="3"
+
+        />
+
+    <!--<item-->
+        <!--android:id="@+id/nameHindi"-->
+        <!--android:title="@string/hindiN"-->
+        <!--app:showAsAction="always"-->
+        <!--android:icon="@drawable/hinduism"-->
+        <!--android:orderInCategory="4"-->
+        <!--/>-->
+
+
+</menu>

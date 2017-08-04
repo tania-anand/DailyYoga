@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="gym.minorproject.com.gym.Yoga_Login">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="60dp"
+        >
+
+       <TableRow>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/user_id"
+                android:hint="@string/UserIdHint"
+                android:textColorHint="@color/hint_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </android.support.design.widget.TextInputLayout>
+       </TableRow>
+        <TableRow>
+            <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/password"
+                android:hint="@string/PasswordHint"
+                android:textColorHint="@color/hint_color"
+                android:inputType="textPassword"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+        </android.support.design.widget.TextInputLayout>
+        </TableRow>
+        <TableRow>
+            <Button
+            android:id="@+id/submit"
+            android:text="@string/ButtonLogin"
+            android:textColor="@color/white"
+            android:background="@color/hint_color"/>
+        </TableRow>
+        <TableRow>
+
+        <TextView
+            android:id="@+id/register_page"
+            android:text="@string/registerPage"
+            android:layout_margin="15dp"
+            android:clickable="true">
+        </TextView>
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

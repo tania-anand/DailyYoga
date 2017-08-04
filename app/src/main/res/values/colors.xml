@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#607D8B</color>
+    <color name="colorPrimaryDark">#203358</color>
+    <color name="colorAccent">#4527df</color>
+    <color name="white">#ffffff</color>
+    <color name="ratingLine">#b54466b1</color>
+    <color name="black">#752b2929</color>
+    <color name="ra">#b56d9cf4</color>
+    <color name="ta">#b5b7d2ff</color>
+    <color name="more_bg">#a61888bc</color>
+    <color name="more_inner_bg">#b5b7d2ff</color>
+    <color name="background">#b7d2ff</color>
+    <color name="re1">#ec0a28</color>
+
+
+    <!-- For Login Page -->
+    <!-- Hint color-->
+    <color name="hint_color">#1d1010</color>
+    <color name="green">#bdefaf</color>
+
+    <!-- For signUp activty userId-->
+    <color name="red">#adff3f3f</color>
+    <color name="greenC">#ad67f57f</color>
+</resources>

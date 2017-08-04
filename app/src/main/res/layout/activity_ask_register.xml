@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gym.minorproject.com.gym.AskRegister">
+
+    <Button
+        android:id="@+id/btnRegisterNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnRNow"
+        android:layout_marginBottom="20dp"
+        android:background="@color/hint_color"
+        android:textColor="@color/white"
+        android:layout_above="@+id/btnRegisterLater" />
+
+    <Button
+        android:id="@+id/btnRegisterLater"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnRLater"
+        android:layout_marginBottom="132dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/hint_color"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

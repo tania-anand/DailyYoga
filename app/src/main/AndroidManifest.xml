@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gym.minorproject.com.gym">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/yoga_app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:screenOrientation="portrait">
+
+        <activity
+            android:name=".MainYoga"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Feedback"
+            android:label="@string/feedback_L"
+            android:parentActivityName=".MainYoga">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gym.minorproject.com.gym.MainYoga" />
+        </activity>
+
+        <activity
+            android:name=".Rate_US"
+            android:label="@string/rate_us_L">
+
+            <!-- android:parentActivityName=".MainYoga"> -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gym.minorproject.com.gym.MainYoga" />
+        </activity>
+
+        <provider
+            android:name=".YogaContentProvider"
+            android:authorities="com.gymapp"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".VideoActivity"
+            android:label="@string/title_activity_video"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- android:parentActivityName=".ScreenSlidePagerActivity"> -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gym.minorproject.com.gym.Exercise_Description" />
+        </activity>
+        <activity
+            android:name=".Exercise_Type_Adapter"
+            android:label="">
+
+            <!-- android:parentActivityName=".MainYoga"> -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gym.minorproject.com.gym.MainYoga" />
+
+
+        </activity>
+        <activity
+            android:name=".Exercise_Description"
+            android:label="@string/exercise_name" />
+
+        <activity android:name=".Benefits" />
+        <activity android:name=".More" />
+        <activity android:name=".Contraindications" />
+
+        <activity
+            android:name=".Exercise_Details"
+            android:label="@string/title_activity_exercise__details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Yoga_Splash"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".About_Us"
+            android:label="@string/about_us_L"
+            android:parentActivityName=".MainYoga">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gym.minorproject.com.gym.MainYoga" />
+        </activity>
+        <activity android:name=".Favourite">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gym.minorproject.com.gym.MainYoga" />
+            </activity>
+        <activity android:name=".AskRegister" />
+        <activity android:name=".Yoga_Login"
+            android:parentActivityName=".MainYoga">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gym.minorproject.com.gym.MainYoga" />
+        </activity>
+        <activity android:name=".Yoga_Register" />
+        <activity android:name=".ViewUserDetails"
+            android:parentActivityName=".MainYoga">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="gym.minorproject.com.gym.MainYoga" />
+        </activity>
+
+        <service android:name=".fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".fcm.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

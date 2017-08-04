@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gym.minorproject.com.gym.ViewUserDetails"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/EnterDetailsV"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:background="@drawable/mydraw"
+
+        />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/mydraw"
+        >
+
+        <TableRow android:layout_margin="@dimen/TableRow">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/RName"
+                android:textSize="@dimen/TableRowTextView"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/VRName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TableRowTextView"
+                android:layout_margin="5dp"/>
+
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"/>
+
+        <TableRow android:layout_margin="@dimen/TableRow">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/RPhoneNo"
+                android:textSize="@dimen/TableRowTextView"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/VRPhoneNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TableRowTextView"
+                android:layout_margin="5dp"/>
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"/>
+
+        <TableRow android:layout_margin="@dimen/TableRow">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Remail_Id"
+                android:textSize="@dimen/TableRowTextView"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/VREmailId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TableRowTextView"
+                android:layout_margin="5dp"/>
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"/>
+
+        <TableRow android:layout_margin="@dimen/TableRow">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/UserIdHint"
+                android:textSize="@dimen/TableRowTextView"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/VRUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TableRowTextView"
+                android:layout_margin="5dp"/>
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"/>
+
+        <TableRow android:layout_margin="@dimen/TableRow">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PasswordHint"
+                android:textSize="@dimen/TableRowTextView"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/VRPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TableRowTextView"
+                android:inputType="textPassword"
+                android:layout_margin="5dp"/>
+        </TableRow>
+
+    </TableLayout>
+    <Button
+        android:id="@+id/buttonView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Details "
+        android:textColor="@color/white"
+        android:background="@color/hint_color"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <!--<Button-->
+        <!--android:id="@+id/btndeleteAcc"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/RDelte"-->
+        <!--android:background="@color/hint_color"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"/>-->
+
+
+</LinearLayout>

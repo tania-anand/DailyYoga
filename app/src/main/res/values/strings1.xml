@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feedbacktext">Enter Your Feedback Or any Query you want to ask</string>
+    <string name="send_button">SEND</string>
+    <string name="rate_us_app">DO RATE OUR APP</string>
+    <string name="button_OK">OK</string>
+
+
+    <!--Menu items of Exercise Display -->
+    <string name="muscles">Muscle</string>
+    <string name="benefits">Benefit</string>
+    <string name="hindiN">Hindi Name</string>
+    <string name="Contraindications">Caution</string>
+    <string name="Contraindication1">Contraindications</string>
+    <string name="Video">Video</string>
+    <string name="More">More</string>
+    <string name="Quote">"Be a lamp to yourself. Be your own confidence. Hold on to the truth within yourself as to the only truth" ~BUDDHA</string>
+
+    <string name="yoga_intro">
+        "Yoga is Hindu spiritual and ascetic discipline, a part of which, including breath control, simple meditation, and the adoption of specific bodily postures,is widely practised for health and relaxation.\n\n"
+    </string>
+
+    <string name="about_us">
+        "We have developed this app for the the users who are interested in learning this art and want to pratice it daily\n\n"
+    </string>
+
+    <string name="quote2">
+        "Through the practices of yoga, we discover that concern for the happiness and well being of others, including animals, must be an essential part of our own quest for happiness and well being. The fork can be a powerful weapon of mass destruction or a tool to create peace on Earth.\n\n"
+    </string>
+
+    <!--items for ask register layout -->
+    <string name="btnRNow">Register Now</string>
+    <string name="btnRLater">Register Later</string>
+
+
+    <!-- For login Activity  -->
+    <string name="UserIdHint">Login Id</string>
+    <string name="PasswordHint">Password</string>
+    <string name="ButtonLogin">Login</string>
+    <string name="registerPage">New User? Click Here To Register</string>
+    <string name="ButtonEdit">Edit Account</string>
+
+    <!-- FOr SIgnUP Activity-->
+    <string name="EnterDetails">Enter Your Details To Register</string>
+    <string name="RButton">Submit</string>
+    <string name="RName">Name</string>
+    <string name="RPhoneNo">Phone No</string>
+    <string name="Remail_Id">Email Id</string>
+    <string name="RPassword">Confirm Password</string>
+
+    <!-- For View SignUp Activity-->
+    <string name="EnterDetailsV">Personal Details </string>
+    <string name="RDelte">Delete Account</string>
+
+
+
+
+
+</resources>

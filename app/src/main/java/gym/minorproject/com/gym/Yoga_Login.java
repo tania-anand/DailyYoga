@@ -1,11 +1,18 @@
 package gym.minorproject.com.gym;
 
+import android.*;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputEditText;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -68,6 +75,18 @@ public class Yoga_Login extends AppCompatActivity implements View.OnClickListene
     ArrayList<Integer> asan_ids;
 
 
+    ConnectivityManager connectivityManager;
+    NetworkInfo networkInfo;
+
+    boolean IsNetworkConnected()
+    {
+        connectivityManager = (ConnectivityManager)getSystemService(CONNECTIVITY_SERVICE);
+        networkInfo = connectivityManager.getActiveNetworkInfo();
+
+        return(networkInfo!=null&&networkInfo.isConnected());
+
+    }
+
     private void init()
     {
 
@@ -124,7 +143,7 @@ public class Yoga_Login extends AppCompatActivity implements View.OnClickListene
                     @Override
                     public void onResponse(String response)
                     {
-                        Toast.makeText(getApplicationContext(),"In Response ",Toast.LENGTH_LONG).show();
+//                        Toast.makeText(getApplicationContext(),"In Response ",Toast.LENGTH_LONG).show();
                         try
                         {
                             JSONObject jsonObject = new JSONObject(response);
@@ -133,7 +152,7 @@ public class Yoga_Login extends AppCompatActivity implements View.OnClickListene
 
                             if (login_success == 1)
                             {
-                                Toast.makeText(getApplicationContext()," login success ",Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), message,Toast.LENGTH_LONG).show();
 
                                 preferences = getSharedPreferences(YogaUtil.SPFileName, MODE_PRIVATE);
                                 loginflag = true;
@@ -146,8 +165,8 @@ public class Yoga_Login extends AppCompatActivity implements View.OnClickListene
 
                                 handler.sendEmptyMessage(101);
 
-                                Toast.makeText(Yoga_Login.this, "login flag of shared prefrences " + loginflag, Toast.LENGTH_LONG).show();
-                                Toast.makeText(Yoga_Login.this, "hello " + response, Toast.LENGTH_LONG).show();
+//                                Toast.makeText(Yoga_Login.this, "login flag of shared prefrences " + loginflag, Toast.LENGTH_LONG).show();
+//                                Toast.makeText(Yoga_Login.this, "hello " + response, Toast.LENGTH_LONG).show();
 
                             }
                             else
@@ -229,30 +248,33 @@ public class Yoga_Login extends AppCompatActivity implements View.OnClickListene
     {
         int i = v.getId();
 
-
-        switch (i)
+        if(IsNetworkConnected())
         {
-            case R.id.submit:
+            switch (i)
+            {
+                case R.id.submit:
 
-                if (validateLoginFields())
-                {
-                    insertDataIntoSignUpBean();
-                    handler.sendEmptyMessage(100);
-
-
-                }
-
-                break;
-
-            case R.id.register_page:
-                Intent intent = new Intent(Yoga_Login.this, Yoga_Register.class);
-                startActivity(intent);
-                finish();
-
-                break;
+                    if (validateLoginFields())
+                    {
+                        insertDataIntoSignUpBean();
+                        handler.sendEmptyMessage(100);
 
 
+                    }
+
+                    break;
+
+                case R.id.register_page:
+                    Intent intent = new Intent(Yoga_Login.this, Yoga_Register.class);
+                    startActivity(intent);
+                    finish();
+
+                    break;
+            }
         }
+
+        else
+            Toast.makeText(getApplicationContext(),"Please Connect TO Internet",Toast.LENGTH_LONG).show();
     }
 
     Handler handler = new Handler()
@@ -281,7 +303,7 @@ public class Yoga_Login extends AppCompatActivity implements View.OnClickListene
         int i = resolver.update(YogaUtil.uri_exercise_tab, values, where, null);
         if (i > 0)
         {
-            Toast.makeText(this, "Favourite Updated: " + i, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Favourite Updated: " , Toast.LENGTH_LONG).show();
         }
     }
 
@@ -300,7 +322,7 @@ public class Yoga_Login extends AppCompatActivity implements View.OnClickListene
                     JSONArray jsonArray = jsonObject.getJSONArray("data");
 
                      int asan_id;
-                    Toast.makeText(Yoga_Login.this,"JSON DATA  "+response,Toast.LENGTH_LONG).show();
+//                    Toast.makeText(Yoga_Login.this,"JSON DATA  "+response,Toast.LENGTH_LONG).show();
                     if (jsonArray != null)
                     {
                         for (int i = 0; i < jsonArray.length(); i++)

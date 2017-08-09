@@ -176,7 +176,7 @@ public class Favourite extends AppCompatActivity implements AdapterView.OnItemCl
                     JSONArray jsonArray = jsonObject.getJSONArray("data");
 
 
-                    Toast.makeText(Favourite.this,"JSON DATA  "+response,Toast.LENGTH_LONG).show();
+//                    Toast.makeText(Favourite.this,"JSON DATA  "+response,Toast.LENGTH_LONG).show();
                     if (jsonArray != null)
                     {
                         for (int i = 0; i < jsonArray.length(); i++)
@@ -276,7 +276,7 @@ public class Favourite extends AppCompatActivity implements AdapterView.OnItemCl
             public void onResponse(String response)
             {
                 // Display the first 500 characters of the response string.
-                Toast.makeText(Favourite.this,"Response is: "+ response,Toast.LENGTH_LONG).show();
+//                Toast.makeText(Favourite.this,"Response is: "+ response,Toast.LENGTH_LONG).show();
 
             }
         },

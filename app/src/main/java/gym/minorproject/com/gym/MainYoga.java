@@ -6,6 +6,8 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -50,6 +52,18 @@ public class MainYoga extends AppCompatActivity
     SharedPreferences preferences;
     boolean loginflag=false;
     String loginname="";
+
+    ConnectivityManager connectivityManager;
+    NetworkInfo networkInfo;
+
+    boolean IsNetworkConnected()
+    {
+        connectivityManager = (ConnectivityManager)getSystemService(CONNECTIVITY_SERVICE);
+        networkInfo = connectivityManager.getActiveNetworkInfo();
+
+        return(networkInfo!=null&&networkInfo.isConnected());
+
+    }
 
 
 
@@ -205,15 +219,19 @@ public class MainYoga extends AppCompatActivity
                 break;
 
             case R.id.nav_logout:
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.putBoolean(YogaUtil.loginflag,false);
-                editor.putString(YogaUtil.loginName,"");
-                editor.putString(YogaUtil.loginPassword,"");
-                editor.commit();
-                deleteDataFromPhone();
-                Intent intent = new Intent(this,MainYoga.class);
-                startActivity(intent);
-                finish();
+
+                if(IsNetworkConnected())
+                {
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean(YogaUtil.loginflag, false);
+                    editor.putString(YogaUtil.loginName, "");
+                    editor.putString(YogaUtil.loginPassword, "");
+                    editor.commit();
+                    deleteDataFromPhone();
+                    Intent intent = new Intent(this, MainYoga.class);
+                    startActivity(intent);
+                    finish();
+                }
                 break;
             case R.id.nav_fav:
                 i = new Intent(MainYoga.this,Favourite.class);
@@ -331,13 +349,16 @@ public class MainYoga extends AppCompatActivity
 
     void deleteDataFromPhone()
     {
-        Uri uri;
+
 
         ContentValues values = new ContentValues();
 
         values.put(YogaUtil.FAV,0);
-        int i = resolver.update(YogaUtil.uri_exercise_tab,values,null,null);
+        resolver.update(YogaUtil.uri_exercise_tab,values,null,null);
+
+        Toast.makeText(getApplicationContext(),"You Successfully logged out",Toast.LENGTH_LONG).show();
 
     }
+
     }
 

@@ -3,6 +3,8 @@ package gym.minorproject.com.gym;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +23,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.firebase.iid.FirebaseInstanceId;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -58,6 +63,8 @@ public class Yoga_Register extends AppCompatActivity implements View.OnClickList
     ProgressDialog progressDialog;
 
     String URL;
+
+
 
     private void init()
     {
@@ -120,7 +127,7 @@ public class Yoga_Register extends AppCompatActivity implements View.OnClickList
             URL=YogaUtil.INSERT_DATA_PHP;
 
         // Instantiate the RequestQueue.
-        Toast.makeText(this,"update mode value "+updateMode,Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,"update mode value "+updateMode,Toast.LENGTH_SHORT).show();
         RequestQueue queue = Volley.newRequestQueue(this);
 
         // Request a string response from the provided URL.
@@ -129,8 +136,19 @@ public class Yoga_Register extends AppCompatActivity implements View.OnClickList
             @Override
             public void onResponse(String response)
             {
-                // Display the first 500 characters of the response string.
-                Toast.makeText(Yoga_Register.this,"Response is: "+ response,Toast.LENGTH_LONG).show();
+                String message;
+
+                try
+                {
+                    JSONObject jsonObject = new JSONObject(response);
+                    message = jsonObject.getString("message");
+
+                    Toast.makeText(Yoga_Register.this, message, Toast.LENGTH_LONG).show();
+                }
+                catch (Exception e)
+                {
+
+                }
 
             }
         },

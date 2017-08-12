@@ -39,8 +39,8 @@ public class ViewUserDetails extends AppCompatActivity implements View.OnClickLi
     TextView txtLogin;
     @InjectView(R.id.VRPhoneNo)
     TextView txtPhoneNo;
-    @InjectView(R.id.VRPassword)
-    TextView txtPassword;
+//    @InjectView(R.id.VRPassword)
+//    TextView txtPassword;
     @InjectView(R.id.buttonView)
     Button button;
 
@@ -75,7 +75,7 @@ public class ViewUserDetails extends AppCompatActivity implements View.OnClickLi
     {
         txtName.setText(rcvbean.getName());
         txtEmail.setText(rcvbean.getEmailId());
-        txtPassword.setText(rcvbean.getPassword());
+//        txtPassword.setText(rcvbean.getPassword());
         txtPhoneNo.setText(rcvbean.getPhoneNo());
         txtLogin.setText(rcvbean.getULoginId());
 

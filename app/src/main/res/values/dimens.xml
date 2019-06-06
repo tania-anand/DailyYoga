@@ -24,4 +24,5 @@
     <!-- for view sign up table row margin-->
     <dimen name="TableRow">15dp</dimen>
     <dimen name="TableRowTextView">20sp</dimen>
+    <dimen name="dialogCornerRadius">20sp</dimen>
 </resources>

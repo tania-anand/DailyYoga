@@ -11,7 +11,7 @@
     android:numColumns="auto_fit"
     android:gravity="center"
     android:stretchMode="columnWidth"
-    tools:context="gym.minorproject.com.gym.Exercise_Type_Adapter"
+    tools:context="gym.minorproject.com.gym.activities.ExerciseList"
     android:background="@color/more_inner_bg">
 
 

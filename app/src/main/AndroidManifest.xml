@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="gym.minorproject.com.gym">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,45 +13,48 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@drawable/yoga_app"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:screenOrientation="portrait">
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory="whateverString"
+        android:screenOrientation="portrait"
+        tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name=".MainYoga"
+            android:name=".activities.MainYoga"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name=".Feedback"
+            android:name=".activities.Feedback"
             android:label="@string/feedback_L"
-            android:parentActivityName=".MainYoga">
+            android:parentActivityName=".activities.MainYoga">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="gym.minorproject.com.gym.MainYoga" />
+                android:value="gym.minorproject.com.gym.activities.MainYoga" />
         </activity>
 
         <activity
-            android:name=".Rate_US"
+            android:name=".activities.RateUS"
             android:label="@string/rate_us_L">
 
             <!-- android:parentActivityName=".MainYoga"> -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="gym.minorproject.com.gym.MainYoga" />
+                android:value="gym.minorproject.com.gym.activities.MainYoga" />
         </activity>
 
         <provider
-            android:name=".YogaContentProvider"
+            android:name=".helper.YogaContentProvider"
             android:authorities="com.gymapp"
             android:enabled="true"
             android:exported="false" />
 
         <activity
-            android:name=".VideoActivity"
+            android:name=".activities.VideoActivity"
             android:label="@string/title_activity_video"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
@@ -58,33 +62,26 @@
             <!-- android:parentActivityName=".ScreenSlidePagerActivity"> -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="gym.minorproject.com.gym.Exercise_Description" />
+                android:value="gym.minorproject.com.gym.activities.ExerciseDescription" />
         </activity>
         <activity
-            android:name=".Exercise_Type_Adapter"
+            android:name=".activities.ExerciseList"
             android:label="">
 
             <!-- android:parentActivityName=".MainYoga"> -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="gym.minorproject.com.gym.MainYoga" />
+                android:value="gym.minorproject.com.gym.activities.MainYoga" />
 
 
         </activity>
-        <activity
-            android:name=".Exercise_Description"
-            android:label="@string/exercise_name" />
-
-        <activity android:name=".Benefits" />
-        <activity android:name=".More" />
-        <activity android:name=".Contraindications" />
 
         <activity
-            android:name=".Exercise_Details"
+            android:name=".activities.ExerciseDetails"
             android:label="@string/title_activity_exercise__details"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Yoga_Splash"
+            android:name=".activities.Splash"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -93,39 +90,40 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".About_Us"
+            android:name=".activities.AboutUs"
             android:label="@string/about_us_L"
-            android:parentActivityName=".MainYoga">
+            android:parentActivityName=".activities.MainYoga">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="gym.minorproject.com.gym.MainYoga" />
+                android:value="gym.minorproject.com.gym.activities.MainYoga" />
         </activity>
-        <activity android:name=".Favourite">
+        <activity android:name=".activities.Favourite">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="gym.minorproject.com.gym.MainYoga" />
+                android:value="gym.minorproject.com.gym.activities.MainYoga" />
             </activity>
-        <activity android:name=".AskRegister" />
-        <activity android:name=".Yoga_Login"
-            android:parentActivityName=".MainYoga">
+        <activity android:name=".activities.AskRegister" />
+        <activity android:name=".activities.Login"
+            android:parentActivityName=".activities.MainYoga">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="gym.minorproject.com.gym.MainYoga" />
+                android:value="gym.minorproject.com.gym.activities.MainYoga" />
         </activity>
-        <activity android:name=".Yoga_Register" />
-        <activity android:name=".ViewUserDetails"
-            android:parentActivityName=".MainYoga">
+        <activity android:name=".activities.Register" />
+        <activity android:name=".activities.ViewUserDetails"
+            android:parentActivityName=".activities.MainYoga">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="gym.minorproject.com.gym.MainYoga" />
+                android:value="gym.minorproject.com.gym.activities.MainYoga" />
         </activity>
+
 
         <service android:name=".fcm.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".fcm.MyFirebaseInstanceIdService">
+        <service android:name=".fcm.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>

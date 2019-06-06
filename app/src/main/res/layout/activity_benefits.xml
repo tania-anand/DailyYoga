@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="gym.minorproject.com.gym.Benefits"
+    tools:context="gym.minorproject.com.gym.activities.Benefits"
     android:background="@color/background"
     android:weightSum="1">
     <ScrollView

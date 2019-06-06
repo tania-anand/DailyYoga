@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="gym.minorproject.com.gym.Yoga_Login">
+    tools:context="gym.minorproject.com.gym.activities.Login">
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:layout_marginLeft="60dp"
-        >
+        android:layout_marginStart="60dp"
+        tools:ignore="UselessParent">
 
        <TableRow>
         <android.support.design.widget.TextInputLayout
@@ -22,7 +23,8 @@
                 android:hint="@string/UserIdHint"
                 android:textColorHint="@color/hint_color"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:inputType="text" />
         </android.support.design.widget.TextInputLayout>
        </TableRow>
         <TableRow>
@@ -52,7 +54,8 @@
             android:id="@+id/register_page"
             android:text="@string/registerPage"
             android:layout_margin="15dp"
-            android:clickable="true">
+            android:clickable="true"
+            android:focusable="true">
         </TextView>
         </TableRow>
 

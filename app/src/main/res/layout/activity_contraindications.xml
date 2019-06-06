@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        tools:context="gym.minorproject.com.gym.Contraindications"
+        tools:context="gym.minorproject.com.gym.activities.Contraindications"
         >
            <TableLayout
                android:layout_width="match_parent"

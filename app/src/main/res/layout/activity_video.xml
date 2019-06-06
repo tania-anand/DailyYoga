@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="gym.minorproject.com.gym.VideoActivity">
+    tools:context="gym.minorproject.com.gym.activities.VideoActivity">
 
     <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/videoView1"

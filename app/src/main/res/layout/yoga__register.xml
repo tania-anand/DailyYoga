@@ -3,12 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="gym.minorproject.com.gym.Yoga_Register"
+    tools:context="gym.minorproject.com.gym.activities.Register"
     android:orientation="vertical"
     android:layout_margin="30dp">
-
-
-
 
         <TextView
             android:layout_width="match_parent"
@@ -28,17 +25,17 @@
                 android:inputType="textPersonName"/>
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/RPhoneNo"
-                android:hint="@string/RPhoneNo"
-                android:inputType="phone"/>
-        </android.support.design.widget.TextInputLayout>
+            <!--<EditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/RPhoneNo"-->
+                <!--android:hint="@string/RPhoneNo"-->
+                <!--android:inputType="phone"/>-->
+        <!--</android.support.design.widget.TextInputLayout>-->
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -51,15 +48,15 @@
                 android:inputType="textEmailAddress"/>
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/RUserName"
-                android:hint="@string/UserIdHint"/>
-        </android.support.design.widget.TextInputLayout>
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<EditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/RUserName"-->
+                <!--android:hint="@string/UserIdHint"/>-->
+        <!--</android.support.design.widget.TextInputLayout>-->
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -72,16 +69,16 @@
                 android:inputType="textPassword"/>
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/RCPassword"
-                android:hint="@string/RPassword"
-                android:inputType="textPassword"/>
-        </android.support.design.widget.TextInputLayout>
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<EditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/RCPassword"-->
+                <!--android:hint="@string/RPassword"-->
+                <!--android:inputType="textPassword"/>-->
+        <!--</android.support.design.widget.TextInputLayout>-->
 
 
 

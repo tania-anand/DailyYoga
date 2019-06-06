@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="gym.minorproject.com.gym.Exercise_Details">
+    tools:context="gym.minorproject.com.gym.activities.ExerciseDetails">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"

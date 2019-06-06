@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="gym.minorproject.com.gym.Yoga_Splash">
+    tools:context="gym.minorproject.com.gym.activities.Splash">
 
     <TextView
         android:layout_width="match_parent"

@@ -15,8 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class YogaContentProvider extends ContentProvider
-{
+public class YogaContentProvider extends ContentProvider {
 
     DBHelper dbHelper;
     SQLiteDatabase sqLiteDatabase;
@@ -46,6 +45,7 @@ public class YogaContentProvider extends ContentProvider
                 }
             }
         }
+
         private boolean checkDataBase() {
             SQLiteDatabase checkDB = null;
             try {
@@ -114,11 +114,13 @@ public class YogaContentProvider extends ContentProvider
         // at the given URI.
         throw new UnsupportedOperationException("Not yet implemented");
     }
+
     @Override
     public Uri insert(Uri uri, ContentValues values) {
         // TODO: Implement this to handle requests to insert a new row.
         throw new UnsupportedOperationException("Not yet implemented");
     }
+
     @Override
     public boolean onCreate() {
         DBHelper  myDbHelper = new DBHelper(getContext());
@@ -136,6 +138,7 @@ public class YogaContentProvider extends ContentProvider
         }
         return  false;
     }
+
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         String tabName = uri.getLastPathSegment();

@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import gym.minorproject.com.gym.R;
+import gym.minorproject.com.gym.helper.SharedPreferencesUtil;
 import gym.minorproject.com.gym.helper.YogaUtil;
 
 public class Splash extends AppCompatActivity {
@@ -40,10 +41,7 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.yoga__splash);
         initViews();
-
-        preferences = getSharedPreferences(YogaUtil.SPFileName,MODE_PRIVATE);
-        loginflag = preferences.getBoolean(YogaUtil.loginflag,false);
-
+        loginflag = SharedPreferencesUtil.getInstance(getApplicationContext()).getLoggedIn();
         handler.sendEmptyMessageDelayed(101,4000);
     }
 

@@ -47,24 +47,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/TableRowTextView"
                 android:drawableLeft="@android:drawable/ic_menu_info_details" />
-          <View
-            android:layout_width="match_parent"
-            android:layout_height="1sp"
-            android:background="@color/black"
-              android:layout_marginBottom="10sp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/RPhoneNo"
-                android:textSize="@dimen/TableRowTextView" />
 
-            <TextView
-                android:id="@+id/VRPhoneNo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/TableRowTextView"
-                android:drawableLeft="@drawable/phone_call"/>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1sp"
@@ -89,23 +74,23 @@
             android:background="@color/black"
             android:layout_marginBottom="10sp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/UserIdHint"
-                android:textSize="@dimen/TableRowTextView" />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/UserIdHint"-->
+                <!--android:textSize="@dimen/TableRowTextView" />-->
 
-            <TextView
-                android:id="@+id/VRUserName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/TableRowTextView"
-                android:drawableLeft="@android:drawable/ic_menu_info_details"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1sp"
-            android:background="@color/black"
-            android:layout_marginBottom="10sp"/>
+            <!--<TextView-->
+                <!--android:id="@+id/VRUserName"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="@dimen/TableRowTextView"-->
+                <!--android:drawableLeft="@android:drawable/ic_menu_info_details"/>-->
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1sp"-->
+            <!--android:background="@color/black"-->
+            <!--android:layout_marginBottom="10sp"/>-->
 
         <!--<TextView-->
                 <!--android:layout_width="match_parent"-->

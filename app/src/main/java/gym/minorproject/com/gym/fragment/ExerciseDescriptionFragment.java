@@ -3,6 +3,7 @@ package gym.minorproject.com.gym.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,7 @@ import gym.minorproject.com.gym.R;
  * A simple {@link Fragment} subclass.
  */
 public class ExerciseDescriptionFragment extends Fragment {
+    private static final String TAG = "ExerciseDescriptionFrag";
     TextView txtsteps;
     String[] Steps;
     String[] Step_Images;
@@ -45,6 +47,7 @@ public class ExerciseDescriptionFragment extends Fragment {
 
         for(int i=0;i<images.length;i++) {
             file_maps.put(i,images[i]);
+            Log.i(TAG, "setImageSlider: "+images[i]);
         }
 
         for(Integer name : file_maps.keySet()) {

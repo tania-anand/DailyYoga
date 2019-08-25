@@ -19,8 +19,8 @@ public class Feedback extends AppCompatActivity implements View.OnClickListener 
     String message;
 
     void init() {
-        feedback=(EditText)findViewById(R.id.feedback);
-        send= (Button)findViewById(R.id.send);
+        feedback=findViewById(R.id.feedback);
+        send= findViewById(R.id.send);
         send.setOnClickListener(this);
 
     }

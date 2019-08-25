@@ -12,18 +12,12 @@ import android.widget.RatingBar;
 import android.widget.Toast;
 
 import gym.minorproject.com.gym.R;
-import gym.minorproject.com.gym.activities.MainYoga;
+import gym.minorproject.com.gym.helper.SharedPreferencesUtil;
 
 public class RateUS extends AppCompatActivity implements View.OnClickListener,RatingBar.OnRatingBarChangeListener{
+    private RatingBar ratingBar;
+    private Button ok;
 
-
-    RatingBar ratingBar;
-    Button ok;
-
-    SharedPreferences preferences;
-
-
-    boolean flag;
     float rating1;
 
     @Override
@@ -31,24 +25,20 @@ public class RateUS extends AppCompatActivity implements View.OnClickListener,Ra
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rate__us);
         init();
-        preferences = getSharedPreferences("GymApp",MODE_PRIVATE);
-        flag=preferences.getBoolean("flag",false);
-        if(flag) {
-            float rating2=  preferences.getFloat("rating",0);
-            ratingBar.setRating(rating2);
-        }
+        rating1 = SharedPreferencesUtil.getInstance(getApplicationContext()).getRating();
+        ratingBar.setRating(rating1);
 
     }
+
     void init() {
-        ratingBar = (RatingBar)findViewById(R.id.ratingBarstar);
+        ratingBar = findViewById(R.id.ratingBarstar);
         ratingBar.setOnRatingBarChangeListener(this);
-        ok=(Button)findViewById(R.id.rate_ok);
+        ok=findViewById(R.id.rate_ok);
         ok.setOnClickListener(this);
-
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         switch (item.getItemId()) {
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
@@ -59,16 +49,9 @@ public class RateUS extends AppCompatActivity implements View.OnClickListener,Ra
 
     @Override
     public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-        SharedPreferences.Editor editor = preferences.edit();
         rating1=rating;
-        flag=true;
-        editor.putBoolean("flag",flag);
-        editor.putFloat("rating",rating1);
-        editor.apply();
-
-        Toast.makeText(this, "Rating: " + rating1, Toast.LENGTH_LONG).show();
-
     }
+
     @Override
     protected void onStop() {
         super.onStop();
@@ -77,10 +60,12 @@ public class RateUS extends AppCompatActivity implements View.OnClickListener,Ra
 
     @Override
     public void onClick(View v) {
+        SharedPreferencesUtil.getInstance(getApplicationContext()).setRating(rating1);
         Intent i = new Intent(this, MainYoga.class);
         Toast.makeText(this,"Thank You For Rating Us ",Toast.LENGTH_SHORT).show();
         startActivity(i);
         finish();
     }
+
 }
 

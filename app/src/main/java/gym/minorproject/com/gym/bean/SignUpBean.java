@@ -7,22 +7,9 @@ import java.io.Serializable;
  */
 
 public class SignUpBean implements Serializable {
-    String Name;
-    String PhoneNo;
-    String EmailId;
-    String ULoginId;
-    String Password;
-    String CPassword;
-
-    public SignUpBean(String name, String phoneNo, String emailId, String ULoginId, String password,
-                      String CPassword) {
-        Name = name;
-        PhoneNo = phoneNo;
-        EmailId = emailId;
-        this.ULoginId = ULoginId;
-        Password = password;
-        this.CPassword = CPassword;
-    }
+    private String Name;
+    private String EmailId;
+    private String Password;
 
     public SignUpBean() {
     }
@@ -35,28 +22,12 @@ public class SignUpBean implements Serializable {
         Name = name;
     }
 
-    public String getPhoneNo() {
-        return PhoneNo;
-    }
-
-    public void setPhoneNo(String phoneNo) {
-        PhoneNo = phoneNo;
-    }
-
     public String getEmailId() {
         return EmailId;
     }
 
     public void setEmailId(String emailId) {
         EmailId = emailId;
-    }
-
-    public String getULoginId() {
-        return ULoginId;
-    }
-
-    public void setULoginId(String ULoginId) {
-        this.ULoginId = ULoginId;
     }
 
     public String getPassword() {
@@ -67,23 +38,13 @@ public class SignUpBean implements Serializable {
         Password = password;
     }
 
-    public String getCPassword() {
-        return CPassword;
-    }
-
-    public void setCPassword(String CPassword) {
-        this.CPassword = CPassword;
-    }
 
     @Override
     public String toString() {
         return "RegisterBean{" +
                 "Name='" + Name + '\'' +
-                ", PhoneNo='" + PhoneNo + '\'' +
                 ", EmailId='" + EmailId + '\'' +
-                ", ULoginId='" + ULoginId + '\'' +
                 ", Password='" + Password + '\'' +
-                ", CPassword='" + CPassword + '\'' +
                 '}';
     }
 }

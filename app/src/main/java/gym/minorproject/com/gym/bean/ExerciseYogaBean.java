@@ -66,10 +66,6 @@ public class ExerciseYogaBean implements Serializable {
         return url1;
     }
 
-
-
-
-
     public ExerciseYogaBean(String name_E, String name_H, String steps, String benefits, String contraindications,
                             String video_Url, String images, String steps_Images, String muscles) {
         Name_E = name_E;

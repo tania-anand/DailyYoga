@@ -13,7 +13,7 @@ import gym.minorproject.com.gym.R;
 public class VideoActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
     String getString;
 
-    private static  String API_KEY ="AIzaSyC8mMqAjch7r5RW4QpeY0vlABDfGD1_nTQ";
+    private static  String API_KEY ="";
     YouTubePlayerView youTubePlayer;
 
     void init() {
